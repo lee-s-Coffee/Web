@@ -1,5 +1,5 @@
+import Header from "@/components/header/Header";
 import type { Metadata } from "next";
-import Navbar from "@/app/components/navigater/Navbar";
 
 export const metadata: Metadata = {
   title: "Lee's Coffee",
@@ -9,16 +9,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function Layout() {
   return (
     <html lang="ko">
       <body className="min-h-screen bg-gray-100">
-        <Navbar /> {/* 상단에 네비게이션 바 */}
-        <main>{children}</main> {/* 페이지 내용 */}
+        <Header />
+        <div>Hello</div>
       </body>
     </html>
   );
